@@ -6,6 +6,12 @@
   @return clamp(#{$min}px, #{$intercept}px + #{$slope * 100}vw, #{$max}px);
 }
 
+@mixin flexcentre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin heading1 {
   font-size: fluid(42, 72);
   font-weight: 600;
