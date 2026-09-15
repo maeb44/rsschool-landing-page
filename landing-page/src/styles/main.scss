@@ -1,6 +1,19 @@
-@use 'reset';
-@use 'variables';
-@use 'mixins';
+@use 'reset' as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'header';
 
+body {
+  display: flex;
+  justify-content: center;
+  font-family: $font-family;
+}
 .app-wrapper {
+  @include flexcentre;
+  width: 100%;
+  max-width: 1440px;
+  background: var(--text-inverse);
+  padding-left: fluid(16, 40);
+  padding-right: fluid(16, 40);
+  padding-bottom: 40px;
 }

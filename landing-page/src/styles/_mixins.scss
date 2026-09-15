@@ -11,7 +11,10 @@
   align-items: center;
   justify-content: center;
 }
-
+@mixin section {
+  width: 100%;
+  @include flexcentre;
+}
 @mixin heading1 {
   font-size: fluid(42, 72);
   font-weight: 600;
