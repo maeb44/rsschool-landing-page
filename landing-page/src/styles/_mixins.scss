@@ -1,4 +1,4 @@
-@use 'scss:math';
+@use 'sass:math';
 
 @function fluid($min, $max, $min-vw: 380, $max-vw: 1440) {
   $slope: math.div($max - $min, $max-vw - $min-vw);
@@ -7,7 +7,7 @@
 }
 
 @mixin heading1 {
-  font-size: 72px;
+  font-size: fluid(42, 72);
   font-weight: 600;
   line-height: 105%;
 }
@@ -16,7 +16,7 @@
   font-style: italic;
 }
 @mixin heading2 {
-  font-size: 60px;
+  font-size: fluid(32, 60);
   font-weight: 600;
   line-height: 125%;
 }
@@ -48,23 +48,4 @@
   font-size: 32px;
   font-weight: 600;
   line-height: 125%;
-}
-
-@mixin heading1-mobile {
-  font-size: 42px;
-  font-weight: 600;
-  line-height: 115%;
-}
-@mixin heading1Accent-mobile {
-  @include heading1-mobile();
-  font-style: italic;
-}
-@mixin heading2-mobile {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 125%;
-}
-@mixin heading2Accent-mobile {
-  @include heading2-mobile();
-  font-style: italic;
 }
