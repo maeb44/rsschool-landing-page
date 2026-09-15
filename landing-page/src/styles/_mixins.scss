@@ -1,5 +1,11 @@
 @use 'scss:math';
 
+@function fluid($min, $max, $min-vw: 380, $max-vw: 1440) {
+  $slope: math.div($max - $min, $max-vw - $min-vw);
+  $intercept: $min - $slope * $min-vw;
+  @return clamp(#{$min}px, #{$intercept}px + #{$slope * 100}vw, #{$max}px);
+}
+
 @mixin heading1 {
   font-size: 72px;
   font-weight: 600;
