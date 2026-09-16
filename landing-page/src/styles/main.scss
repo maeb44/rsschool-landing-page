@@ -11,7 +11,8 @@ body {
 }
 .app-wrapper {
   @include flexcentre;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 100%;
   max-width: 1440px;
   background: var(--background-page);

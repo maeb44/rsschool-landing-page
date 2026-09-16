@@ -1,0 +1,53 @@
+@use 'mixins' as *;
+
+.hero {
+  @include flexcentre;
+  padding-block: 100px;
+  padding-inline: fluid(60, 100, 768, 1440);
+  justify-content: flex-start;
+  width: 100%;
+  border-radius: 40px;
+  background-image: url(../../public/img-hero.jpg);
+  @media (max-width: 768px) {
+    padding-block: fluid(60, 100, 380, 768);
+    padding-inline: fluid(16, 60, 380, 768);
+  }
+  &__desc {
+    @include flexcentre;
+    width: fluid(530, 348, 380, 768);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  &__title {
+    @include heading1;
+    color: var(--text-inverse);
+  }
+  &__title-italic {
+    @include heading1Accent;
+    color: var(--text-accent);
+  }
+  &__text {
+    @include medium;
+    color: var(--text-inverse);
+  }
+  &__menu-btn {
+    @include flexcentre;
+    @include link-button;
+    border-radius: 100px;
+    gap: 8px;
+    width: 200px;
+    height: 64px;
+    color: var(--text-primary);
+    background: var(--background-page);
+    svg {
+      display: none;
+    }
+    &:hover,
+    &:active {
+      svg {
+        display: block;
+      }
+    }
+  }
+}
