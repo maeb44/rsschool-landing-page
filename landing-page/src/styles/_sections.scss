@@ -1,11 +1,10 @@
 @use 'mixins' as *;
 
 .hero {
-  @include flexcentre;
+  @include section;
   padding-block: 100px;
   padding-inline: fluid(60, 100, 768, 1440);
   justify-content: flex-start;
-  width: 100%;
   border-radius: 40px;
   background-image: url(../../public/img-hero.jpg);
   background-position: center;
@@ -50,6 +49,106 @@
       svg {
         display: block;
       }
+    }
+  }
+}
+.coffee {
+  @include section;
+  flex-direction: column;
+  gap: 40px;
+  &__title {
+    @include heading2;
+    text-align: center;
+    color: var(--text-primary);
+  }
+  &__title-italic {
+    @include heading2Accent;
+    color: var(--text-accent);
+  }
+}
+.slider {
+  @include section;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px 0px;
+  &__arrow {
+    @include flexcentre;
+    transition:
+      background 0.3s ease,
+      border 0.3s ease;
+    border: 1px solid var(--border-inverse);
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    path {
+      stroke: var(--text-primary);
+    }
+    &--left {
+    }
+    &--right {
+    }
+    &:hover {
+      border-color: var(--background-container);
+      background: var(--background-container);
+      path {
+        stroke: var(--text-inverse);
+      }
+    }
+  }
+  &__cards-track {
+    flex: 1;
+    @include flexcentre;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  &__card {
+    @include flexcentre;
+    flex-direction: column;
+    flex: 0 0 100%;
+    gap: 20px;
+  }
+  &__image {
+  }
+  &__desc {
+    @include flexcentre;
+    flex-direction: column;
+    gap: 16px;
+    width: fluid(348, 480, 380, 768);
+  }
+  &__title {
+    @include heading3;
+    text-align: center;
+    color: var(--text-primary);
+  }
+  &__subtitle {
+    @include medium;
+    text-align: center;
+    color: var(--text-primary);
+  }
+  &__choose {
+    @include flexcentre;
+    gap: 12px;
+    flex-basis: 100%;
+  }
+  &__flat-btn {
+    display: block;
+    border-radius: 100px;
+    width: 40px;
+    height: 4px;
+    background: var(--border-primary);
+    &--active {
+      background: var(--border-inverse);
+    }
+    &:hover {
+      background: var(--border-inverse);
+    }
+  }
+  @media (max-width: 700px) {
+    &__arrow {
+      display: none;
+    }
+    &__card {
+      width: 100%;
     }
   }
 }
