@@ -12,7 +12,7 @@ body {
   @include flexcentre;
   width: 100%;
   max-width: 1440px;
-  background: var(--text-inverse);
+  background: var(--background-page);
   padding-left: fluid(16, 40);
   padding-right: fluid(16, 40);
   padding-bottom: 40px;

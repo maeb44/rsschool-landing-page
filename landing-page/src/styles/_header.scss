@@ -11,7 +11,7 @@
   &__list {
     @include flexcentre;
     gap: fluid(20, 40, 768, 1440);
-    @media (max-width: 769px) {
+    @media (max-width: 768px) {
       display: none;
     }
   }
@@ -21,6 +21,7 @@
   }
   &__theme-select {
     @include flexcentre;
+    gap: 8px;
     border: 1px solid var(--border-primary);
     border-radius: 100px;
     padding: 4px;
@@ -36,7 +37,7 @@
     &--mobile {
       display: none;
     }
-    @media (max-width: 769px) {
+    @media (max-width: 768px) {
       &--desktop {
         display: none;
       }
@@ -46,13 +47,21 @@
         width: 44px;
         height: 44px;
         display: flex;
+        &:hover {
+          background: var(--background-container);
+        }
       }
     }
   }
 }
 .link {
+  display: block;
   @include link-button;
   color: var(--text-primary);
+  margin: 0;
+  &:hover {
+    border-bottom: 2px solid var(--text-primary);
+  }
 }
 .logo {
   width: 100px;
@@ -65,13 +74,48 @@
   }
 }
 .icon {
+  svg rect,
+  svg path {
+    transition: fill 0.3s ease-out;
+  }
   &--light {
-    width: 36px;
-    height: 36px;
+    svg rect {
+      fill: var(--text-accent);
+    }
+    svg path {
+      fill: var(--text-inverse);
+    }
   }
   &--dark {
-    width: 36px;
-    height: 36px;
+    svg rect {
+      fill: var(--text-inverse);
+    }
+    svg path {
+      fill: var(--text-primary);
+    }
+    &:hover {
+      svg rect {
+        fill: #665f55;
+      }
+      svg path {
+        fill: var(--text-inverse);
+      }
+    }
+  }
+
+  &--desktop {
+    display: flex;
+  }
+  &--mobile {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    &--desktop {
+      display: none;
+    }
+    &--mobile {
+      display: flex;
+    }
   }
 }
 
@@ -82,6 +126,32 @@
     }
     &--dark {
       display: block;
+    }
+  }
+  .icon {
+    &--light {
+      svg rect {
+        fill: none;
+      }
+      svg path {
+        fill: var(--border-primary);
+      }
+      &:hover {
+        svg rect {
+          fill: var(--background-container);
+        }
+        svg path {
+          fill: var(--text-primary);
+        }
+      }
+    }
+    &--dark {
+      svg rect {
+        fill: var(--text-accent);
+      }
+      svg path {
+        fill: var(--text-inverse);
+      }
     }
   }
 }
