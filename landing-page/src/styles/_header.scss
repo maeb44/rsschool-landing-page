@@ -28,6 +28,7 @@
   }
   &__menu {
     @include flexcentre;
+    color: var(--text-primary);
     &--desktop {
       gap: 8px;
       svg {
