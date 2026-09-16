@@ -10,10 +10,11 @@ body {
 }
 .app-wrapper {
   @include flexcentre;
+  align-items: flex-start;
   width: 100%;
   max-width: 1440px;
   background: var(--background-page);
-  padding-left: fluid(16, 40);
-  padding-right: fluid(16, 40);
+  padding-left: fluid(16, 40, 380, 768);
+  padding-right: fluid(16, 40, 380, 768);
   padding-bottom: 40px;
 }
