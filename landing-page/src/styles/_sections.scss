@@ -8,6 +8,8 @@
   width: 100%;
   border-radius: 40px;
   background-image: url(../../public/img-hero.jpg);
+  background-position: center;
+  background-size: cover;
   @media (max-width: 768px) {
     padding-block: fluid(60, 100, 380, 768);
     padding-inline: fluid(16, 60, 380, 768);
