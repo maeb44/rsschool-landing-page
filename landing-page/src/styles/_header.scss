@@ -49,6 +49,9 @@
   &:hover {
     border-bottom: 2px solid var(--text-primary);
   }
+  &:active {
+    border-bottom: 2px solid var(--text-primary);
+  }
 }
 .logo {
   width: 100px;
