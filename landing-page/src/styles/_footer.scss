@@ -1,0 +1,89 @@
+@use 'mixins' as *;
+
+.footer {
+  margin-top: 100px;
+  @include section;
+  border-radius: 40px;
+  gap: fluid(40, 100, 380, 780);
+  padding-inline: fluid(60, 100, 768, 1440);
+  padding-block: fluid(60, 100, 380, 768);
+  background: var(--background-container);
+  &__desc-wrapper {
+    display: flex;
+    width: 50%;
+    gap: 40px;
+    flex-direction: column;
+  }
+  &__title {
+    @include heading2;
+    color: var(--text-primary);
+  }
+  &__title-italic {
+    @include heading2Accent;
+    color: var(--text-accent);
+  }
+  &__icon-wrapper {
+    @include flexcentre;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  &__links-wrapper {
+    color: var(--text-inverse);
+    gap: 40px;
+    @include flexcentre;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+  }
+  &__subtitle {
+    @include heading3;
+  }
+  &__ul {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__li {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    &:hover {
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__text {
+    @include medium;
+  }
+  @media (max-width: 768px) {
+    padding-inline: fluid(16, 60, 380, 768);
+    flex-direction: column;
+    &__desc-wrapper {
+      width: 100%;
+    }
+    &__links-wrapper {
+      width: 100%;
+    }
+  }
+}
+.icon {
+  &--social {
+    @include flexcentre;
+    border: 1px solid var(--border-primary);
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    path {
+      stroke: var(--text-inverse);
+    }
+    &:hover {
+      background: var(--text-inverse);
+      border-color: var(--text-inverse);
+      path {
+        stroke: #403f3d;
+      }
+    }
+  }
+}
