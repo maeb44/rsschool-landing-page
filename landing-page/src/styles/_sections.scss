@@ -83,10 +83,10 @@
     path {
       stroke: var(--text-primary);
     }
-    &--left {
-    }
-    &--right {
-    }
+    // &--left {
+    // }
+    // &--right {
+    // }
     &:hover {
       border-color: var(--background-container);
       background: var(--background-container);
@@ -107,8 +107,8 @@
     flex: 0 0 100%;
     gap: 20px;
   }
-  &__image {
-  }
+  // &__image {
+  // }
   &__desc {
     @include flexcentre;
     flex-direction: column;
@@ -261,8 +261,8 @@
   color: var(--text-primary);
   gap: 8px;
   .icon--store {
-    svg {
-    }
+    // svg {
+    // }
     path {
       fill: var(--text-primary);
     }
