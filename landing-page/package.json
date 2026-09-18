@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "deploy": "gh-pages -d dist --history-change=none",
+    "deploy": "gh-pages -d dist --no-history",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
