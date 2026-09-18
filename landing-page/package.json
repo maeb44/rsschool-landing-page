@@ -1,0 +1,17 @@
+{
+  "name": "landing-page",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "gh-pages -d dist --no-history",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "sass-embedded": "^1.104.1",
+    "vite": "^8.3.0"
+  }
+}

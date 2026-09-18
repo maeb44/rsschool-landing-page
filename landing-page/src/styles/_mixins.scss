@@ -1,0 +1,60 @@
+@use 'sass:math';
+
+@function fluid($min, $max, $min-vw: 380, $max-vw: 1440) {
+  $slope: math.div($max - $min, $max-vw - $min-vw);
+  $intercept: $min - $slope * $min-vw;
+  @return clamp(#{$min}px, #{$intercept}px + #{$slope * 100}vw, #{$max}px);
+}
+
+@mixin flexcentre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin section {
+  width: 100%;
+  @include flexcentre;
+}
+@mixin heading1 {
+  font-size: fluid(42, 72, 380, 768);
+  font-weight: 600;
+  line-height: 105%;
+}
+@mixin heading1Accent {
+  @include heading1();
+  font-style: italic;
+}
+@mixin heading2 {
+  font-size: fluid(32, 60, 380, 768);
+  font-weight: 600;
+  line-height: 125%;
+}
+@mixin heading2Accent {
+  @include heading2();
+  font-style: italic;
+}
+@mixin heading3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+@mixin medium {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+@mixin caption {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 140%;
+}
+@mixin link-button {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+}
+@mixin burger-link {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 125%;
+}
