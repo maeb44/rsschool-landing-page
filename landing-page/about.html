@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -12,8 +12,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
+    <script>
+      (function () {
+        var theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
   </head>
-  <body data-theme="dark">
+  <body>
     <div class="app-wrapper">
       <header class="header">
         <a href="./index.html" class="header__logo">
@@ -31,11 +37,11 @@
         <nav>
           <ul class="header__list">
             <li>
-              <a class="link" href="./index.html/#coffee">Favorite coffee</a>
+              <a class="link" href="./index.html#coffee">Favorite coffee</a>
             </li>
-            <li><a class="link" href="./index.html/#about">About</a></li>
-            <li><a class="link" href="./index.html/#app">Mobile app</a></li>
-            <li><a class="link" href="./index.html/#contact">Contact us</a></li>
+            <li><a class="link" href="./index.html#about">About</a></li>
+            <li><a class="link" href="./index.html#app">Mobile app</a></li>
+            <li><a class="link" href="./index.html#contact">Contact us</a></li>
           </ul>
         </nav>
         <div class="header__control">
