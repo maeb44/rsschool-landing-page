@@ -1,10 +1,30 @@
 @use 'mixins' as *;
 @use 'variables' as *;
 .header {
+  position: relative;
+  z-index: 999;
   padding: 20px 0;
   @include flexcentre;
   width: 100%;
   justify-content: space-between;
+  &__nav {
+    @media (max-width: 768px) {
+      z-index: 0;
+      @include flexcentre;
+      transition: transform 0.3s ease;
+      background: var(--background-page);
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: calc(100vh - 100px);
+      left: 100%;
+      gap: 100px;
+      flex-direction: column;
+      &--active {
+        transform: translateX(-100%);
+      }
+    }
+  }
   &__logo {
     @include flexcentre;
   }
@@ -12,7 +32,8 @@
     @include flexcentre;
     gap: fluid(20, 40, 768, 1440);
     @media (max-width: 768px) {
-      display: none;
+      flex-direction: column;
+      gap: 60px;
     }
   }
   &__control {
@@ -29,6 +50,9 @@
   &__menu {
     @include flexcentre;
     color: var(--text-primary);
+    &--mobile {
+      display: none;
+    }
     &--desktop {
       gap: 8px;
       svg {
@@ -36,6 +60,10 @@
       }
     }
     @media (max-width: 768px) {
+      &--mobile {
+        display: flex;
+        gap: 16px;
+      }
       &--desktop {
         display: none;
       }
@@ -52,6 +80,9 @@
   }
   &:active {
     border-bottom: 2px solid var(--text-primary);
+  }
+  @media (max-width: 768px) {
+    @include burger-link;
   }
 }
 .logo {
@@ -112,7 +143,9 @@
 
 .burger {
   display: none;
+  z-index: 999;
   &__line {
+    transition: transform 0.3s ease;
     position: absolute;
     width: 18px;
     height: 2px;
@@ -137,9 +170,6 @@
       top: 50%;
       transform: translate(0) rotate(45deg);
     }
-  }
-  &:hover {
-    background: var(--border-inverse);
   }
 
   @media (max-width: 768px) {
