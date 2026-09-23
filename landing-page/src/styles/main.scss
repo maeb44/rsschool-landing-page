@@ -8,7 +8,9 @@
 @use 'card' as *;
 
 .hidden {
-  overflow: hidden;
+  @media (max-width: 768px) {
+    overflow: hidden;
+  }
 }
 
 body {

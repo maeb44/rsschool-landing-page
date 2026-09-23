@@ -15,13 +15,11 @@ function burger() {
 }
 function toLink() {
   const nav = document.querySelector('.header__nav');
-  if (!nav) return; // ← только если это внутри функции
+  if (!nav) return;
 
   nav.addEventListener('click', (e) => {
-    // 1. Меню должно быть открыто
     if (!nav.classList.contains('header__nav--active')) return;
 
-    // 2. Клик должен быть по ссылке (или внутри неё)
     const link = e.target.closest('.link');
     if (!link) return;
 
@@ -42,5 +40,20 @@ function toLink() {
     }, 300);
   });
 }
+function escCloseBurger() {
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+
+    const nav = document.querySelector('.header__nav');
+    const burger = document.querySelector('.burger');
+
+    if (!nav?.classList.contains('header__nav--active')) return;
+
+    nav.classList.remove('header__nav--active');
+    burger?.classList.remove('burger--active');
+    document.body.classList.remove('hidden');
+  });
+}
 burger();
 toLink();
+escCloseBurger();
