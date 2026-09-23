@@ -2,6 +2,7 @@
 
 .card {
   @include flexcentre;
+  overflow: hidden;
   justify-content: flex-start;
   border: 1px solid var(--border-primary);
   border-radius: 40px;
@@ -10,6 +11,8 @@
   height: 506px;
 
   &__img {
+    transition: transform 0.3s ease;
+    object-fit: cover;
     border-radius: 40px;
     width: 310px;
     height: 310px;
@@ -36,5 +39,10 @@
   }
   &__subtitle {
     @include medium;
+  }
+  &:hover {
+    .card__img {
+      object-fit: contain;
+    }
   }
 }
