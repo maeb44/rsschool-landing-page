@@ -16,7 +16,7 @@
   }
   &__title {
     @include heading2;
-    color: var(--text-primary);
+    color: var(--text-inverse);
   }
   &__title-italic {
     @include heading2Accent;
