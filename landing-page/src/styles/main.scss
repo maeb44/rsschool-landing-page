@@ -4,6 +4,8 @@
 @use 'header';
 @use 'sections' as *;
 @use 'footer' as *;
+@use 'about' as *;
+@use 'card' as *;
 
 body {
   display: flex;

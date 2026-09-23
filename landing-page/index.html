@@ -2,15 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="./src/styles/main.scss" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
-      rel="stylesheet"
-    />
     <title>landing-page</title>
   </head>
   <body data-theme="dark">
@@ -154,7 +149,7 @@
               and those seeking a warm and inviting space to enjoy their
               favorite beverage.
             </p>
-            <button class="hero__menu-btn">
+            <a href="./about.html" class="hero__menu-btn">
               Menu
               <svg
                 width="20"
@@ -192,10 +187,10 @@
                   stroke-linejoin="round"
                 />
               </svg>
-            </button>
+            </a>
           </div>
         </section>
-        <section class="coffee">
+        <section id="coffee" class="coffee">
           <h2 class="coffee__title">
             Choose your
             <span class="coffee__title-italic">favorite</span> coffee
@@ -220,6 +215,7 @@
             <div class="slider__cards-track">
               <div class="slider__card">
                 <img
+                  alt="coffee"
                   class="slider__image"
                   src="./public/slider/coffee-slider-1.png"
                 />
@@ -234,6 +230,7 @@
               </div>
               <div class="slider__card">
                 <img
+                  alt="coffee"
                   class="slider__image"
                   src="./public/slider/coffee-slider-2.png"
                 />
@@ -248,6 +245,7 @@
               </div>
               <div class="slider__card">
                 <img
+                  alt="coffee"
                   class="slider__image"
                   src="./public/slider/coffee-slider-3.png"
                 />
@@ -283,7 +281,7 @@
             </div>
           </div>
         </section>
-        <section class="about">
+        <section id="about" class="about">
           <h2 class="about__title">
             Resource is
             <span class="about__title-italic">the perfect and cozy place</span>
@@ -325,7 +323,7 @@
             </div>
           </div>
         </section>
-        <section class="mobile-app">
+        <section id="app" class="mobile-app">
           <div class="mobile-app__desc-wrapper">
             <h2 class="mobile-app__title">
               <span class="mobile-app__title-italic">Download</span> our app to
@@ -336,7 +334,11 @@
               ordering your favorite coffee from wherever you are
             </p>
             <div class="mobile-app__btn-wrapper">
-              <button class="down-btn">
+              <a
+                href="https://play.google.com/store/games?hl=en"
+                class="down-btn"
+                target="_blank"
+              >
                 <div class="icon icon--store">
                   <svg
                     width="36"
@@ -357,8 +359,12 @@
                   <p class="down-btn__text">Available on the</p>
                   <p class="down-btn__big-text">App Store</p>
                 </div>
-              </button>
-              <button class="down-btn">
+              </a>
+              <a
+                class="down-btn"
+                target="_blank"
+                href="https://www.apple.com/store"
+              >
                 <div class="icon icon--store">
                   <svg
                     width="36"
@@ -385,7 +391,7 @@
                   <p class="down-btn__text">Available on the</p>
                   <p class="down-btn__big-text">Google Play</p>
                 </div>
-              </button>
+              </a>
             </div>
           </div>
           <img
@@ -395,7 +401,7 @@
           />
         </section>
       </main>
-      <footer class="footer">
+      <footer id="contact" class="footer">
         <div class="footer__desc-wrapper">
           <h2 class="footer__title">
             Sip, Savor, Smile.
@@ -482,7 +488,12 @@
                   stroke-linejoin="round"
                 />
               </svg>
-              <a class="footer__text">8558 Green Rd., LA</a>
+              <a
+                href="https://www.google.com/maps?q=8558+Green+Rd,+LA"
+                target="_blank"
+                class="footer__text"
+                >8558 Green Rd., LA</a
+              >
             </li>
             <li class="footer__li">
               <svg
@@ -500,7 +511,9 @@
                   stroke-linejoin="round"
                 />
               </svg>
-              <a class="footer__text">+1 (603) 555-0123</a>
+              <a href="tel:+16035550123" class="footer__text"
+                >+1 (603) 555-0123</a
+              >
             </li>
             <li class="footer__li">
               <svg
@@ -538,6 +551,6 @@
         </div>
       </footer>
     </div>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
