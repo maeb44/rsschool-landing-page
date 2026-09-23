@@ -23,12 +23,14 @@
             alt="logo"
           />
         </div>
-        <ul class="header__list">
-          <li><a class="link" href="#coffee">Favorite coffee</a></li>
-          <li><a class="link" href="#about">About</a></li>
-          <li><a class="link" href="#app">Mobile app</a></li>
-          <li><a class="link" href="#contact">Contact us</a></li>
-        </ul>
+        <nav>
+          <ul class="header__list">
+            <li><a class="link" href="#coffee">Favorite coffee</a></li>
+            <li><a class="link" href="#about">About</a></li>
+            <li><a class="link" href="#app">Mobile app</a></li>
+            <li><a class="link" href="#contact">Contact us</a></li>
+          </ul>
+        </nav>
         <div class="header__control">
           <div class="header__theme-select">
             <div class="icon icon--light icon--desktop">
@@ -408,7 +410,7 @@
             <span class="footer__title-italic">It’s coffee time!</span>
           </h2>
           <div class="footer__icon-wrapper">
-            <div class="icon icon--social">
+            <a href="https://x.com/" target="_blank" class="icon icon--social">
               <svg
                 width="24"
                 height="24"
@@ -422,8 +424,12 @@
                   stroke-linejoin="round"
                 />
               </svg>
-            </div>
-            <div class="icon icon--social">
+            </a>
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              class="icon icon--social"
+            >
               <svg
                 width="24"
                 height="24"
@@ -445,8 +451,12 @@
                   stroke-linejoin="round"
                 />
               </svg>
-            </div>
-            <div class="icon icon--social">
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              class="icon icon--social"
+            >
               <svg
                 width="24"
                 height="24"
@@ -460,7 +470,7 @@
                   stroke-linejoin="round"
                 />
               </svg>
-            </div>
+            </a>
           </div>
         </div>
         <div class="footer__links-wrapper">

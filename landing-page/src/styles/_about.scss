@@ -65,4 +65,24 @@
     display: flex;
     gap: 40px;
   }
+  &__button {
+    @include flexcentre;
+    transition:
+      background 0.3s ease,
+      border 0.3s ease;
+    border: 1px solid var(--border-inverse);
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    path {
+      stroke: var(--text-primary);
+    }
+    &:hover {
+      border-color: var(--background-container);
+      background: var(--background-container);
+      path {
+        stroke: var(--text-inverse);
+      }
+    }
+  }
 }

@@ -16,7 +16,7 @@
   <body data-theme="dark">
     <div class="app-wrapper">
       <header class="header">
-        <div class="header__logo">
+        <a href="./index.html" class="header__logo">
           <img
             class="logo logo--light"
             src="./public/logo/logo.svg"
@@ -27,13 +27,17 @@
             src="./public/logo/logo-dark.svg"
             alt="logo"
           />
-        </div>
-        <ul class="header__list">
-          <li><a class="link" href="#coffee">Favorite coffee</a></li>
-          <li><a class="link" href="#about">About</a></li>
-          <li><a class="link" href="#app">Mobile app</a></li>
-          <li><a class="link" href="#contact">Contact us</a></li>
-        </ul>
+        </a>
+        <nav>
+          <ul class="header__list">
+            <li>
+              <a class="link" href="./index.html/#coffee">Favorite coffee</a>
+            </li>
+            <li><a class="link" href="./index.html/#about">About</a></li>
+            <li><a class="link" href="./index.html/#app">Mobile app</a></li>
+            <li><a class="link" href="./index.html/#contact">Contact us</a></li>
+          </ul>
+        </nav>
         <div class="header__control">
           <div class="header__theme-select">
             <div class="icon icon--light icon--desktop">
@@ -149,21 +153,21 @@
           </h1>
           <div class="menu__choose">
             <button class="menu__choose-btn menu__choose-btn--active">
-              <div class="menu__choose-img">
+              <span class="menu__choose-img">
                 <img src="./public/choose/🫖.png" alt="cup of coffee" />
-              </div>
+              </span>
               Coffee
             </button>
             <button class="menu__choose-btn menu__choose-btn">
-              <div class="menu__choose-img">
+              <span class="menu__choose-img">
                 <img src="./public/choose/tea.png" alt="cup of tea" />
-              </div>
+              </span>
               Tea
             </button>
             <button class="menu__choose-btn menu__choose-btn">
-              <div class="menu__choose-img">
+              <span class="menu__choose-img">
                 <img src="./public/choose/desserts.png" alt="desserts" />
-              </div>
+              </span>
               Dessert
             </button>
           </div>
@@ -176,7 +180,7 @@
               />
               <div class="card__txt-wrapper">
                 <div class="card__desc-wrapper">
-                  <h3 class="card__title">Irish coffee</h3>
+                  <p class="card__title">Irish coffee</p>
                   <p class="card__subtitle">
                     Fragrant black coffee with Jameson Irish whiskey and whipped
                     milk
@@ -193,7 +197,7 @@
               />
               <div class="card__txt-wrapper">
                 <div class="card__desc-wrapper">
-                  <h3 class="card__title">Kahlua coffee</h3>
+                  <p class="card__title">Kahlua coffee</p>
                   <p class="card__subtitle">
                     Classic coffee with milk and Kahlua liqueur under a cap of
                     frothed milk
@@ -210,7 +214,7 @@
               />
               <div class="card__txt-wrapper">
                 <div class="card__desc-wrapper">
-                  <h3 class="card__title">Honey raf</h3>
+                  <p class="card__title">Honey raf</p>
                   <p class="card__subtitle">
                     Espresso with frothed milk, cream and aromatic honey
                   </p>
@@ -226,7 +230,7 @@
               />
               <div class="card__txt-wrapper">
                 <div class="card__desc-wrapper">
-                  <h3 class="card__title">Ice cappuccino</h3>
+                  <p class="card__title">Ice cappuccino</p>
                   <p class="card__subtitle">
                     Cappuccino with soft thick foam in summer version with ice
                   </p>
@@ -242,7 +246,7 @@
               />
               <div class="card__txt-wrapper">
                 <div class="card__desc-wrapper">
-                  <h3 class="card__title">Espresso</h3>
+                  <p class="card__title">Espresso</p>
                   <p class="card__subtitle">Classic black coffee</p>
                 </div>
                 <p class="card__title">$4.50</p>
@@ -256,7 +260,7 @@
               />
               <div class="card__txt-wrapper">
                 <div class="card__desc-wrapper">
-                  <h3 class="card__title">Latte</h3>
+                  <p class="card__title">Latte</p>
                   <p class="card__subtitle">
                     Espresso coffee with the addition of steamed milk and dense
                     milk foam
@@ -273,7 +277,7 @@
               />
               <div class="card__txt-wrapper">
                 <div class="card__desc-wrapper">
-                  <h3 class="card__title">Latte macchiato</h3>
+                  <p class="card__title">Latte macchiato</p>
                   <p class="card__subtitle">
                     Espresso with frothed milk and chocolate
                   </p>
@@ -289,7 +293,7 @@
               />
               <div class="card__txt-wrapper">
                 <div class="card__desc-wrapper">
-                  <h3 class="card__title">Coffee with cognac</h3>
+                  <p class="card__title">Coffee with cognac</p>
                   <p class="card__subtitle">
                     Fragrant black coffee with cognac and whipped cream
                   </p>
@@ -298,6 +302,26 @@
               </div>
             </div>
           </div>
+          <button class="menu__button">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </section>
       </main>
       <footer class="footer">
@@ -307,7 +331,7 @@
             <span class="footer__title-italic">It’s coffee time!</span>
           </h2>
           <div class="footer__icon-wrapper">
-            <div class="icon icon--social">
+            <a href="https://x.com/" target="_blank" class="icon icon--social">
               <svg
                 width="24"
                 height="24"
@@ -321,8 +345,12 @@
                   stroke-linejoin="round"
                 />
               </svg>
-            </div>
-            <div class="icon icon--social">
+            </a>
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              class="icon icon--social"
+            >
               <svg
                 width="24"
                 height="24"
@@ -344,8 +372,12 @@
                   stroke-linejoin="round"
                 />
               </svg>
-            </div>
-            <div class="icon icon--social">
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              class="icon icon--social"
+            >
               <svg
                 width="24"
                 height="24"
@@ -359,7 +391,7 @@
                   stroke-linejoin="round"
                 />
               </svg>
-            </div>
+            </a>
           </div>
         </div>
         <div class="footer__links-wrapper">

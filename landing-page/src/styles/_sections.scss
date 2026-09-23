@@ -83,10 +83,6 @@
     path {
       stroke: var(--text-primary);
     }
-    // &--left {
-    // }
-    // &--right {
-    // }
     &:hover {
       border-color: var(--background-container);
       background: var(--background-container);
@@ -261,24 +257,35 @@
   color: var(--text-primary);
   gap: 8px;
   .icon--store {
-    // svg {
-    // }
     path {
       fill: var(--text-primary);
     }
   }
-  &:hover {
-    border-color: var(--background-container);
-    color: var(--text-inverse);
-    background: var(--background-container);
-    &__text {
-      color: var(--text-inverse);
-    }
+  .down-btn {
+    // базовые стили
+    color: var(--text-primary);
+    background: transparent;
+    border: 1px solid var(--border-color);
+
+    &__text,
     &__big-text {
-      color: var(--text-inverse);
+      color: inherit;
+      transition: color 0.2s;
     }
+
     path {
-      fill: var(--text-inverse);
+      fill: currentColor;
+      transition: fill 0.2s;
+    }
+
+    &:hover {
+      border-color: var(--background-container);
+      color: var(--text-inverse);
+      background: var(--background-container);
+
+      path {
+        fill: var(--text-inverse);
+      }
     }
   }
   &__text-wrapper {
