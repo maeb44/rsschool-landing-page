@@ -2,10 +2,10 @@
 
 .modal {
   padding: 10px;
-  position: absolute;
+  position: fixed;
   z-index: 999;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   @include flexcentre;
   background-color: rgba(0, 0, 0, 0.295);
   &__wrapper {

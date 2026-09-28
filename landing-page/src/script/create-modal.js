@@ -49,7 +49,6 @@ function bindModal(modalEl) {
     priceEl.textContent = `$${total.toFixed(2)}`;
   }
 
-  // размеры
   modalEl.querySelectorAll('.modal-button--size').forEach((btn) => {
     btn.addEventListener('click', () => {
       modalEl
