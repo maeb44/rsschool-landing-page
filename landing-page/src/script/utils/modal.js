@@ -21,15 +21,15 @@ ${drink.description}
             <div class="modal__text-wrapper">
               <p class="modal__desc">Size</p>
               <div class="modal__btn-wrapper">
-                <button class="modal-button" data-add="${drink.sizes.s['add-price']}">
+                <button class="modal-button modal-button--size" data-add="${drink.sizes.s['add-price']}">
                   <div class="modal-button__sub">S</div>
                   <p class="modal-button__main">${drink.sizes.s.size}</p>
                 </button>
-                <button class="modal-button" data-add="${drink.sizes.m['add-price']}">
+                <button class="modal-button modal-button--size" data-add="${drink.sizes.m['add-price']}">
                   <div class="modal-button__sub">M</div>
                   <p class="modal-button__main">${drink.sizes.m.size}</p>
                 </button>
-                <button class="modal-button" data-add="${drink.sizes.l['add-price']}">
+                <button class="modal-button modal-button--size" data-add="${drink.sizes.l['add-price']}">
                   <div class="modal-button__sub">L</div>
                   <p class="modal-button__main">${drink.sizes.l.size}</p>
                 </button>
@@ -38,15 +38,15 @@ ${drink.description}
             <div class="modal__text-wrapper">
               <p class="modal__desc">Additives</p>
               <div class="modal__btn-wrapper">
-                <button class="modal-button" data-add="${drink.additives[0]['add-price']}">
+                <button class="modal-button modal-button--add" data-name="${drink.additives[0].name}" data-add="${drink.additives[0]['add-price']}">
                   <div class="modal-button__sub">1</div>
                   <p class="modal-button__main">${drink.additives[0].name}</p>
                 </button>
-                <button class="modal-button" data-add="${drink.additives[1]['add-price']}">
+                <button class="modal-button modal-button--add" data-name="${drink.additives[1].name}" data-add="${drink.additives[1]['add-price']}">
                   <div class="modal-button__sub">2</div>
                   <p class="modal-button__main">${drink.additives[1].name}</p>
                 </button>
-                <button class="modal-button" data-add="${drink.additives[2]['add-price']}">
+                <button class="modal-button modal-button--add" data-name="${drink.additives[2].name}" data-add="${drink.additives[2]['add-price']}">
                   <div class="modal-button__sub">3</div>
                   <p class="modal-button__main">${drink.additives[2].name}</p>
                 </button>
@@ -54,8 +54,8 @@ ${drink.description}
             </div>
             <div class="modal__text-wrapper">
               <div class="modal__price-wrapper">
-                <span class="modal__title modal__title--price">Total:</span>
-                <span class="modal__title modal__title--price" data-price="${drink.price}">${drink.price}</span>
+                <span class="modal__title">Total:</span>
+                <span class="modal__title modal__title--price" data-price="${drink.price}">$${drink.price}</span>
               </div>
               <div class="modal__pricedesc-wrapper">
                 <span class="icon icon--modal">

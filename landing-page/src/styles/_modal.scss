@@ -3,6 +3,7 @@
 .modal {
   padding: 10px;
   position: absolute;
+  z-index: 999;
   width: 100%;
   height: 100vh;
   @include flexcentre;
@@ -115,8 +116,12 @@
   &--active {
     border-color: var(--background-modal-control);
     background: var(--background-modal-control);
+
     .modal-button__sub {
-      background: var(--background-container);
+      background: var(--background-page);
+    }
+    .modal-button__main {
+      color: var(--text-inverse);
     }
   }
 }
