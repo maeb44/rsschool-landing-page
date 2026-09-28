@@ -5,3 +5,4 @@ import './script/add-cards.js';
 import './script/switch-category.js';
 import './script/burger.js';
 import './script/create-modal.js';
+import './script/slider.js';

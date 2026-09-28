@@ -99,10 +99,20 @@
     overflow: hidden;
   }
   &__card {
+    transition: 0.4s ease;
     @include flexcentre;
     flex-direction: column;
     flex: 0 0 100%;
     gap: 20px;
+    &--left {
+      transform: translateX(0);
+    }
+    &--centre {
+      transform: translateX(-100%);
+    }
+    &--right {
+      transform: translateX(-200%);
+    }
   }
   // &__image {
   // }
