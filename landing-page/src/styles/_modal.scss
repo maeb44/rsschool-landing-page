@@ -44,8 +44,6 @@
   }
   &__title {
     @include heading3;
-    &--price {
-    }
   }
   &__price-wrapper {
     @include flexcentre;

@@ -7,11 +7,11 @@ export function createCard(dataOfCard) {
     nameOfImg = nameOfImg.replace('.png', '.jpg');
   }
   return `
-		  <div class="card">
+		  <div class="card" data-id="${dataOfCard.id}">
               <img
                 class="card__img"
                 alt="${dataOfCard.category}"
-                src="./public/${dataOfCard.category}/${nameOfImg}"
+                src="./${dataOfCard.category}/${nameOfImg}"
               />
               <div class="card__txt-wrapper">
                 <div class="card__desc-wrapper">
