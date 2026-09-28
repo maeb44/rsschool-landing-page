@@ -6,6 +6,7 @@
 @use 'footer' as *;
 @use 'about' as *;
 @use 'card' as *;
+@use 'modal' as *;
 
 .hidden {
   @media (max-width: 768px) {

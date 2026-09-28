@@ -92,7 +92,8 @@
     }
   }
   &__cards-track {
-    flex: 1;
+    flex: 1 1 80%;
+    min-width: 0;
     @include flexcentre;
     justify-content: flex-start;
     overflow: hidden;

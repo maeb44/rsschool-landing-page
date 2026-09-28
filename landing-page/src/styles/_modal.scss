@@ -1,0 +1,133 @@
+@use 'mixins' as *;
+
+.modal {
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  @include flexcentre;
+  background-color: rgba(0, 0, 0, 0.295);
+  &__wrapper {
+    @include flexcentre;
+    gap: 20px;
+    border-radius: 40px;
+    padding: 16px;
+    width: fluid(688, 800, 768, 1440);
+    background: var(--background-modal);
+  }
+  &__img {
+    flex-shrink: 0;
+    @include flexcentre;
+    align-self: flex-start;
+    width: 310px;
+    @media (max-width: 767px) {
+      display: none;
+    }
+    img {
+      border-radius: 40px;
+    }
+  }
+  &__desc-wrapper {
+    flex: 1;
+    gap: 20px;
+    @include flexcentre;
+    flex-direction: column;
+    width: 70%;
+  }
+  &__text-wrapper {
+    width: 100%;
+    gap: 8px;
+    @include flexcentre;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--text-primary);
+  }
+  &__title {
+    @include heading3;
+    &--price {
+    }
+  }
+  &__price-wrapper {
+    @include flexcentre;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__desc {
+    @include medium;
+  }
+  &__btn-wrapper {
+    flex-wrap: wrap;
+    @include flexcentre;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  &__close {
+    color: var(--text-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: 100px;
+    padding: 10px 78px;
+    width: 100%;
+    height: 44px;
+    &:hover {
+      border-color: var(--background-modal-control);
+      background: var(--background-modal-control);
+    }
+  }
+  &__pricedesc-wrapper {
+    padding-top: 12px;
+    position: relative;
+    @include flexcentre;
+    align-items: flex-start;
+    gap: 8px;
+    border-top: 1px solid var(--border-primary);
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+    }
+  }
+  &__desc-price {
+    @include caption;
+  }
+}
+
+.modal-button {
+  border: 1px solid var(--border-primary);
+  border-radius: 100px;
+  padding: 8px 16px 8px 8px;
+  height: 46px;
+  @include flexcentre;
+  gap: 8px;
+  &__sub {
+    @include flexcentre;
+    @include link-button;
+    text-transform: capitalize;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    background: var(--border-primary);
+  }
+  &__main {
+    @include link-button;
+  }
+  &:hover,
+  &--active {
+    border-color: var(--background-modal-control);
+    background: var(--background-modal-control);
+    .modal-button__sub {
+      background: var(--background-container);
+    }
+  }
+}
+.icon--modal {
+  width: 16px;
+  height: 16px;
+  g {
+    path {
+      stroke: var(--text-primary);
+    }
+  }
+}
