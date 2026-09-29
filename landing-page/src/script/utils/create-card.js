@@ -1,13 +1,13 @@
 import { filteredData } from './fillter-data.js';
 
-export function createCard(dataOfCard) {
+export function createCard(dataOfCard, disabled = '') {
   if (!dataOfCard) return;
   let nameOfImg = `${dataOfCard.name.toLowerCase().replaceAll(' ', '')}.png`;
   if (dataOfCard.category == 'coffee') {
     nameOfImg = nameOfImg.replace('.png', '.jpg');
   }
   return `
-		  <div class="card" data-id="${dataOfCard.id}">
+		  <div class="card ${disabled}" data-id="${dataOfCard.id}">
               <img
                 class="card__img"
                 alt="${dataOfCard.category}"

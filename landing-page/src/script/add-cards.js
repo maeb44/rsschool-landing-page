@@ -12,7 +12,10 @@ export function addCards(typeOfCard = 'coffee') {
     return;
   }
   const data = filteredData(typeOfCard);
-  const arrOfCard = data.map((e) => createCard(e));
+  const arrOfCard = data.map((e, index) => {
+    if (index > 3) return createCard(e, 'card--disabled');
+    return createCard(e);
+  });
   wrapper.innerHTML = arrOfCard.join('\n');
 }
 addCards();

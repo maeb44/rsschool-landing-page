@@ -45,4 +45,9 @@
       object-fit: contain;
     }
   }
+  &--disabled {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 }
