@@ -1,10 +1,3 @@
-function checkSize() {
-  window.addEventListener('resize', () => {
-    if (window.innerWidth <= 768) {
-      console.log(1);
-    }
-  });
-}
 function showCards() {
   const btn = document.querySelector('.menu__button');
   btn.addEventListener('click', (e) => {
@@ -15,5 +8,4 @@ function showCards() {
     }
   });
 }
-checkSize();
 showCards();

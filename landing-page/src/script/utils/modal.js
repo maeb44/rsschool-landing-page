@@ -21,7 +21,7 @@ ${drink.description}
             <div class="modal__text-wrapper">
               <p class="modal__desc">Size</p>
               <div class="modal__btn-wrapper">
-                <button class="modal-button modal-button--size" data-add="${drink.sizes.s['add-price']}">
+                <button class="modal-button modal-button--size modal-button--active" data-add="${drink.sizes.s['add-price']}">
                   <div class="modal-button__sub">S</div>
                   <p class="modal-button__main">${drink.sizes.s.size}</p>
                 </button>
